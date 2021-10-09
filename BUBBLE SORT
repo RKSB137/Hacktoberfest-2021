@@ -1,0 +1,16 @@
+ar=[ ]
+n=int(input("Enter the number of element"))
+for i in range(0,n):
+	ar.append(int(input("Enter the element")))
+i=1
+k=0
+while(i<n)and(k==0):
+	k=1
+	for j in range(0,n-i):
+		if ar[j]>ar[j+1]:
+			t=ar[j]
+			ar[j]=ar[j+1]
+			ar[j+1]=t
+			k=0
+	i=i+1
+print(ar)
